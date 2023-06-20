@@ -1,0 +1,39 @@
+@import "../../../../styles/variables";
+
+h1 {
+  color: #9b1c98;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.secondary-title {
+  font-weight: 300;
+  color: #4e4e4e;
+  font-size: 1.35rem;
+  margin: 1.35rem 0;
+}
+
+/*h2 {
+  text-transform: uppercase;
+}*/
+
+.highlighted {
+  color: $purple-primary;
+}
+@media (max-width: 1199.98px) {
+  .secondary-title {
+    font-size: 1.15rem;
+  }
+}
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .secondary-title {
+    font-size: 1.15rem;
+    padding: 0 1rem;
+    font-weight: 400;
+    margin: 1rem;
+  }
+}

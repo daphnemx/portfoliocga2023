@@ -1,0 +1,61 @@
+.about-container {
+  min-height: 100%;
+  padding-top: 68.6px;
+  background-image: url("../../../../assets/img/aboutme-img-bckg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-inline: 12%;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  align-content: center;
+  justify-items: center;
+}
+p {
+  font-weight: 300;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+.buttons-container > * {
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+.ilustracion-container {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cga-ilustracion {
+  max-height: 360px;
+  border-radius: 3%;
+}
+
+@media (max-width: 767.98px) {
+  .about-container {
+    padding: 1rem;
+  }
+  .buttons-container > * {
+    max-width: 100%;
+  }
+}

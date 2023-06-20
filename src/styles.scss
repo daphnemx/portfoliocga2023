@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "./styles/variables";
+@import "bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Elsie:wght@400;900&display=swap");
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: $gray-primary;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Elsie", cursive;
+  color: $purple-primary;
+  font-size: 2.5rem;
+}
+
+.button-primary {
+  border: 0.5px solid $purple-primary;
+  padding: 1rem;
+  background-color: transparent;
+  font-family: "Elsie", cursive;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $purple-primary;
+  margin-top: 1rem;
+  line-height: 100%;
+  border-radius: 10px;
+}
+
+.button-primary:hover {
+  cursor: pointer;
+  background-color: $purple-primary;
+  color: #ffff;
+  border: none;
+}
+
+p {
+  font-size: 107%;
+}
