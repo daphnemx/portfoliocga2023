@@ -1,4 +1,8 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+  [class.navbar-hidden]="isNavbarHidden"
+  data-aos="fade-up"
+>
   <div class="container-fluid">
     <a class="navbar-brand" href="#"
       ><div>
@@ -23,7 +27,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link">know my work</a>
+          <a class="nav-link" (click)="scrollToSection('portfolio')"
+            >know my work</a
+          >
         </li>
         <li class="nav-item">
           <a
@@ -35,7 +41,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)="scrollToSection('contact')"
-            >contact me</a
+            >get in touch</a
           >
         </li>
       </ul>

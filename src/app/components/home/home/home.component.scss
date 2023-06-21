@@ -19,8 +19,54 @@ h1 {
 }*/
 
 .highlighted {
-  color: $purple-primary;
+  font-weight: 500;
+  color: $gray-primary;
 }
+
+.about-container {
+  background: linear-gradient(to bottom, #ffff, $bckg-gray-light);
+}
+
+.contact-container {
+  background: linear-gradient(to bottom, $bckg-gray-light, $gray-secondary);
+}
+
+.recommendation-card {
+  background-color: rgba($gray-primary, 0.15);
+  padding: 3rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.icon-box {
+  background-color: $purple-primary;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.5);
+}
+.contact-btn {
+  background-color: $purple-primary;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  color: #ffff;
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+}
+.contact-btn:hover {
+  background-color: #b42ab2;
+}
+
 @media (max-width: 1199.98px) {
   .secondary-title {
     font-size: 1.15rem;

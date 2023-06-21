@@ -1,7 +1,52 @@
 .contact-container {
-  min-height: 100%;
+  min-height: 100vh;
+  padding: 12%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cards-container {
+  display: flex;
+  margin-inline: -1rem;
+  gap: 4rem;
+  min-height: 300px;
+}
+
+.contact-inner-container {
+  margin-top: 8rem;
 }
 
 h2 {
   text-align: center;
+}
+
+.recommendation-profile {
+  font-size: 0.8rem;
+}
+
+.contact-parr {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-block: 2rem;
+}
+
+.contact-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  .contact-container {
+    padding: 2rem;
+  }
+  .cards-container {
+    margin: -1rem;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
 }

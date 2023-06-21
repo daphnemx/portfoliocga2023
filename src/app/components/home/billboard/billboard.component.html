@@ -1,4 +1,4 @@
-<div class="hero-container text-center">
+<div id="billboard" class="hero-container text-center">
   <div class="upper-container">
     <div class="title-container row gx-0">
       <div class="col"></div>
@@ -29,6 +29,7 @@
       </div>
       <div class="col"></div>
     </div>
+    <!--
     <div class="img-container">
       <img
         data-aos="flip-up"
@@ -51,15 +52,13 @@
         alt=""
       />
     </div>
+    -->
   </div>
   <div class="row buttons-container gx-0">
     <div
       [@slideUpAnimation]
       class="col-12 col-md-4 billboard-button p-0"
-      (mouseover)="
-        changeImage($event, './assets/icons/arrow-open-light.svg', 1)
-      "
-      (mouseout)="changeImage($event, imageUrl[0], 3)"
+      (click)="scrollToSection('portfolio')"
     >
       <div class="button-text">
         <img [src]="imageUrl[0]" />
@@ -69,10 +68,7 @@
     <div
       [@slideUpAnimation]
       class="col-12 col-md-4 billboard-button p-0"
-      (mouseover)="
-        changeImage($event, './assets/icons/arrow-open-light.svg', 1)
-      "
-      (mouseout)="changeImage($event, imageUrl[0], 3)"
+      (click)="scrollToSection('aboutme')"
     >
       <div class="button-text">
         <img [src]="imageUrl[0]" />
@@ -82,12 +78,11 @@
     <div
       [@slideUpAnimation]
       class="col-12 col-md-4 billboard-button p-0"
-      (mouseover)="changeImage($event, './assets/icons/chat-light.svg', 1)"
-      (mouseout)="changeImage($event, imageUrl[0], 3)"
+      (click)="scrollToSection('contact')"
     >
       <div class="button-text">
         <img [src]="imageUrl[1]" />
-        <div>contact me</div>
+        <div>get in touch</div>
       </div>
     </div>
   </div>

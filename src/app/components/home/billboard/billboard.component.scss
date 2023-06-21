@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   position: relative;
-  min-height: 100%;
+  min-height: 100vh;
   padding-top: 68.6px;
   background-color: #ffff;
 }
@@ -15,7 +15,7 @@
   flex-grow: 2;
   display: flex;
   flex-direction: column;
-  background-image: url("../../../../assets/img/back-wave-right.svg");
+  /*background-image: url("../../../../assets/img/back-wave-right.svg");*/
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 50%;
@@ -66,8 +66,8 @@
 
 .buttons-container {
   overflow-x: hidden;
-  background-color: $bckg-gray-light;
-  background-image: url("../../../../assets/img/back-wave-left.svg");
+  /*background-color: $bckg-gray-light;
+  background-image: url("../../../../assets/img/back-wave-left.svg");*/
   background-repeat: no-repeat;
   background-position: top;
   background-position-x: left;
@@ -93,12 +93,19 @@
 
 .billboard-button:hover {
   background-color: $purple-primary;
-  color: #ffff;
+  /*color: #ffff;*/
   cursor: pointer;
-  background-image: url("https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg");
   background-size: cover;
-  background-color: rgba($purple-primary, 0.9);
-  background-blend-mode: multiply;
+}
+
+.billboard-button:nth-child(1):hover {
+  background-image: url("../../../../assets/img/work.png");
+}
+.billboard-button:nth-child(2):hover {
+  background-image: url("../../../../assets/img/knowme.png");
+}
+.billboard-button:nth-child(3):hover {
+  background-image: url("../../../../assets/img/contact.png");
 }
 
 .billboard-button:not(*) {
