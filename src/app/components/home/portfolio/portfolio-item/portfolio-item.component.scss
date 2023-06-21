@@ -1,0 +1,119 @@
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: currentColor;
+}
+.portfolio-item {
+  overflow: hidden;
+}
+
+.portfolio-item-img {
+  width: 100%;
+  transition: opacity 0.35s, transform 0.35s;
+  backface-visibility: hidden;
+}
+
+.portfolio-item-img:hover {
+  transform: translate3d(0, 0, 0) scale(1.12);
+  overflow: hidden;
+}
+
+.project-card-container {
+  display: flex;
+  justify-content: center;
+  margin: auto 15%;
+}
+
+.project-card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  max-height: 450px;
+}
+
+.project-card figure {
+  position: relative;
+  overflow: hidden;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.project-card figure figcaption {
+  padding: 1.25rem;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.project-card figure figcaption::before,
+.project-card figure figcaption::after {
+  pointer-events: none;
+}
+
+.project-card figure figcaption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.project-card figure p {
+  font-size: 0.8rem;
+  margin: 0 auto 0.65rem auto;
+}
+
+figure.effect-milo {
+  background-image: #ffff;
+  display: flex;
+}
+figure.effect-milo:hover {
+  box-shadow: -2px 4px 10px -3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -2px 4px 10px -3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -2px 4px 10px -3px rgba(0, 0, 0, 0.3);
+}
+
+figure.effect-milo img {
+  max-height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-milo:hover img {
+  opacity: 0.01;
+  -webkit-transform: translate3d(0, 0, 0) scale(1.12);
+  transform: translate3d(0, 0, 0) scale(1.12);
+}
+
+figure.effect-milo p {
+  padding: 0 0 0 0.5rem;
+  width: 95%;
+  text-align: left;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+}
+
+figure.effect-milo:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+figure.effect-milo span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.25;
+}

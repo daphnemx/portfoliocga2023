@@ -1,0 +1,19 @@
+<div class="portfolio-item">
+  <a [href]="projectUrl" target="_blank" rel="noopener noreferrer">
+    <div
+      class="project-card"
+      data-aos="fade-up"
+      [attr.data-aos-delay]="aosDelay"
+    >
+      <figure class="effect-milo">
+        <img [src]="imgUrl" alt="" />
+        <figcaption>
+          <p>
+            <span>{{ title }}</span>
+          </p>
+          <p>{{ description }}</p>
+        </figcaption>
+      </figure>
+    </div>
+  </a>
+</div>

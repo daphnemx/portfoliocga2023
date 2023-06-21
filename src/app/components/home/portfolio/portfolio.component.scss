@@ -1,0 +1,29 @@
+.portfolio-container {
+  min-height: 100vh;
+  padding: 12%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.portfolio-item-container > * {
+  width: 33.33%;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+.portfolio-item-container {
+  gap: 0.5rem;
+  margin-inline: -1rem;
+  display: flex;
+  max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .portfolio-item-container {
+    flex-direction: column;
+  }
+  .portfolio-item-container > * {
+    width: auto;
+  }
+}
