@@ -1,0 +1,11 @@
+<div class="project-main-container row gx-0">
+  <div class="col"></div>
+  <div class="project-wrapper col-lg-10 col-xl-8">
+    <ng-container [ngSwitch]="project">
+      <app-sales-statement
+        *ngSwitchCase="'sales-statement'"
+      ></app-sales-statement
+    ></ng-container>
+  </div>
+  <div class="col"></div>
+</div>
