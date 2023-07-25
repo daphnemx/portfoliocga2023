@@ -1,89 +1,18 @@
-<div id="billboard" class="hero-container text-center">
-  <div class="upper-container">
-    <div class="title-container row gx-0">
-      <div class="col"></div>
-      <div class="col-12 col-md-6 col-lg-6 content-container">
-        <div class="text-container">
-          <div [@fadeInOut]="isVisible ? 'visible' : 'hidden'">
-            <p class="secondary-title">Hola, I am Claudia Garfias:</p>
-            <h1>
-              <div>Product Designer</div>
-            </h1>
-          </div>
-          <h1 [@bounceInTop]>
-            <div class="ampersand roll-in-left bounce-in-element">& </div>
-            <div class="bounce-in-element">UX </div>
-            <div class="bounce-in-element">Specialist</div>
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-delay="1000"
-            data-aos-duration="1400"
-            class="secondary-title"
-          >
-            I architect well-designed, aesthetic experiences that seamlessly
-            unify users' needs and business targets, to help brands deliver
-            consistently successful products.
-          </p>
-        </div>
-      </div>
-      <div class="col"></div>
-    </div>
-    <!--
-    <div class="img-container">
-      <img
-        data-aos="flip-up"
-        data-aos-delay="1300"
-        src="./assets/img/researchnarrow.svg"
-        alt=""
-        class="floating-object"
-        [ngClass]="{ appear: showAnimation }"
-      />
-      <img
-        data-aos="flip-up"
-        data-aos-delay="1600"
-        src="./assets/img/prototypenarrow.svg"
-        alt=""
-      />
-      <img
-        data-aos="flip-up"
-        data-aos-delay="1900"
-        src="./assets/img/codenarrow.svg"
-        alt=""
-      />
-    </div>
-    -->
-  </div>
-  <div class="row buttons-container gx-0">
-    <div
-      [@slideUpAnimation]
-      class="col-12 col-md-4 billboard-button p-0"
-      (click)="scrollToSection('portfolio')"
-    >
-      <div class="button-text">
-        <img [src]="imageUrl[0]" />
-        <div>know my work</div>
-      </div>
-    </div>
-    <div
-      [@slideUpAnimation]
-      class="col-12 col-md-4 billboard-button p-0"
-      (click)="scrollToSection('aboutme')"
-    >
-      <div class="button-text">
-        <img [src]="imageUrl[0]" />
-        <div>know me</div>
-      </div>
-    </div>
-    <div
-      [@slideUpAnimation]
-      class="col-12 col-md-4 billboard-button p-0"
-      (click)="scrollToSection('contact')"
-    >
-      <div class="button-text">
-        <img [src]="imageUrl[1]" />
-        <div>get in touch</div>
+<section id="billboard" class="bill-main-container">
+  <div class="bill-upper-container row">
+    <div class="bill-greeting col-xxl-8 text-center">
+      <div class="bill-iam">
+        <h1>
+          <span class="bill-welcome">Welcome! I'm Claudia,<br /></span>
+          creative designer and developer.
+        </h1>
       </div>
     </div>
   </div>
-</div>
+  <div class="scrolldown-icon" (click)="scrollToSection('portfolio')">
+    <img src="./assets/icons/scrolldown.svg" />
+  </div>
+  <div class="marquee-container">
+    <app-marquee></app-marquee>
+  </div>
+</section>

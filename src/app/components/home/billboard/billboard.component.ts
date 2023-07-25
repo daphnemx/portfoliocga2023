@@ -9,6 +9,7 @@ import {
   stagger,
   state,
 } from '@angular/animations';
+import { Router, NavigationEnd, Event } from '@angular/router';
 
 @Component({
   selector: 'app-billboard',
@@ -39,12 +40,12 @@ import {
     ]),
     trigger('fadeInOut', [
       state('void', style({ opacity: 0 })),
-      transition('void <=> *', animate('1.25s')),
+      transition('void <=> *', animate('1200ms')),
     ]),
     trigger('slideUpAnimation', [
       transition(':enter', [
         style({ transform: 'translateY(100%)' }),
-        animate('1400ms', style({ transform: 'translateY(0)' })),
+        animate('600ms', style({ transform: 'translateY(0)' })),
       ]),
     ]),
   ],
@@ -54,6 +55,8 @@ export class BillboardComponent implements OnInit {
   imageUrl = ['./assets/icons/arrow-open.svg', './assets/icons/chat.svg'];
   hoveredIndex: number | null = null;
   showAnimation: boolean = false;
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     //this.startAnimation();
@@ -78,6 +81,16 @@ export class BillboardComponent implements OnInit {
     return this.hoveredIndex === index;
   }
 
+  /*scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el !== null) {
+      el.scrollIntoView();
+    }
+  }*/
+
+  openLink(id: string | undefined) {
+    this.router.navigate([''], { fragment: id });
+  }
   scrollToSection(id: string) {
     const el = document.getElementById(id);
     if (el !== null) {
