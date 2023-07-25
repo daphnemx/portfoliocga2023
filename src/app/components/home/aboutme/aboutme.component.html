@@ -1,68 +1,139 @@
 <div id="aboutme" class="about-container row gx-0">
-  <div class="col-xl-6 about-text-container">
+  <h2 data-aos="fade-down">Meet me</h2>
+  <div class="col about-text-container">
     <div class="text-container">
-      <div>
-        <div>
-          <h2 data-aos="fade-down">Meet me</h2>
-          <div data-aos="fade-right">
-            <p>
-              I became passionate about design at an early age when I discovered
-              the power of inanimated things to evoke emotions through
-              interaction. I strive to be the
-              <span class="highlighted"
-                >architect of well-designed products that blend user needs with
-                business goals to help companies deliver consistently successful
-                products.</span
-              >
-            </p>
-            <p>
-              My BFA studies in Graphic Design provided me a strong foundation
-              in visual design. As I explored web development, I got excited
-              when I could translate my website designs into code (I coded this
-              portfolio). This naturally led to merge my skills with user
-              interface design. My recent four year experience designing digital
-              products at IBM played a significant role in shaping my
-              professional career as a product designer.
-              <span class="highlighted"
+      <div class="col">
+        <div class="text-block-container" data-aos="fade-right">
+          <p>
+            I became passionate about design at an early age when I discovered
+            the power of inanimated things to evoke emotions through
+            interaction. I strive to be the
+            <span class="highlighted"
+              >architect of well-designed products that blend user needs with
+              business goals to help companies deliver consistently successful
+              products.</span
+            >
+          </p>
+          <p>
+            My BFA studies in Graphic Design provided me a strong foundation in
+            visual design. As I explored web development, I got excited when I
+            could translate my website designs into code (I coded this portfolio
+            using Angular). This naturally led to merge my skills with user
+            interface design. My recent 3+ years experience designing digital
+            products at IBM played a significant role in shaping my professional
+            career as a product designer.
+            <!--<span class="highlighted"
                 >My goal is to specialize in designing meaningful experiences
                 that bring practical value and make a tangible impact on
                 people's everyday lives</span
-              >. Besides design, I'm passionate about playing the piano and
+              >.
+              Besides design, I'm passionate about playing the piano and
               ukulele, indulging in reading, drawing, and take walks with my
-              dog.
-            </p>
+              dog.-->
+          </p>
 
-            <div>
-              <p class="invitation">
-                I possess
-                <span class="highlighted"
-                  >strong skills as a UX Strategist, Frontend Developer, and
-                  Product Designer</span
-                >.
-              </p>
-            </div>
+          <div>
+            <p class="invitation">
+              I posses strong skills as a
+              <span class="highlighted">
+                UX Strategist, Frontend Developer, and Product Designer</span
+              >.
+            </p>
           </div>
+        </div>
+        <!--
           <div class="buttons-container">
             <button
               class="button-primary"
               data-aos="fade-up"
-              data-aos-delay="300"
+              (click)="scrollToSection('contact')"
             >
               get in touch
             </button>
             <button
               class="button-primary"
               data-aos="fade-up"
-              data-aos-delay="600"
+              data-aos-delay="100"
+              (click)="scrollToSection('portfolio')"
             >
-              know my work
+              check out my work
             </button>
+          </div>-->
+      </div>
+      <div class="col-xl-1"></div>
+      <div class="col">
+        <div class="right-container">
+          <div class="photo-container">
+            <img
+              data-aos="fade-down"
+              data-aos-delay="100"
+              class="cga-ilustracion"
+              src="./assets/img/profileclaudiagarfias.png"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-xl-6 ilustracion-container">
-    <!--<img class="cga-ilustracion" src="./assets/img/cgilustracion.jpg" />-->
+  <div class="accordion-container">
+    <div class="accordion" ngbAccordion data-aos="fade-down">
+      <div ngbAccordionItem [collapsed]="true">
+        <p ngbAccordionHeader>
+          <button ngbAccordionButton>My Skills</button>
+        </p>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              <div class="row gx-0">
+                <div class="col-xl-6">
+                  <ul>
+                    <li>User research</li>
+                    <li>User interface design</li>
+                    <li>Front-end development</li>
+                  </ul>
+                </div>
+                <div class="col-xl-6">
+                  <ul>
+                    <li>Usability testing</li>
+                    <li>Visual/Graphic design</li>
+                    <li>Video editing</li>
+                  </ul>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion" ngbAccordion data-aos="fade-down">
+      <div ngbAccordionItem [collapsed]="true">
+        <p ngbAccordionHeader>
+          <button ngbAccordionButton>My Design Philosophy</button>
+        </p>
+        <div ngbAccordionCollapse>
+          <div ngbAccordionBody>
+            <ng-template>
+              <div class="row gx-0">
+                <div>
+                  <p>
+                    I believe great design should be
+                    <span class="highlighted">grounded on reality </span>, so
+                    empathizing with the user is fundamental in each creation
+                    process. As it is rooted in human psychology, good design is
+                    <span class="highlighted">timeless and perfectible</span>, a
+                    designer's work is never truly done, it is adaptable to
+                    changes and sometimes it leads the change. And finally I
+                    believe design should be
+                    <span class="highlighted">enjoyable</span>, it evokes
+                    positive emotions and bring delightfulness to the context
+                    where it is meant to exists.
+                  </p>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

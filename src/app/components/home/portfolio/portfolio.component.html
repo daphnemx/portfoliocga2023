@@ -1,26 +1,55 @@
 <div id="portfolio" class="portfolio-container row gx-0">
   <div class="col-xl-12">
-    <h2 data-aos="fade-up">Portfolio</h2>
-    <div class="portfolio-item-container g-0">
-      <portfolio-item
-        title="Sales Payment Statement"
-        projectUrl="https://uxclaudia.framer.ai/projects-is"
-        description="Web Platform for a sales team to review monthly Payment
-        Statement details."
-        imgUrl="./assets/img/salesstatement.png"
-      ></portfolio-item>
-      <portfolio-item
-        title="System Monitor Dashboard"
-        projectUrl="https://uxclaudia.framer.ai/projects-spd"
-        description="UI design for a digital dashboard to monitor ssytem processes"
-        imgUrl="./assets/img/monitordashboard.png"
-      ></portfolio-item>
-      <portfolio-item
-        title="Design Festival Webpage"
-        projectUrl="https://uxclaudia.framer.ai/projects-spark"
-        description="Webpage design for a global design festival."
-        imgUrl="./assets/img/spark.png"
-      ></portfolio-item>
+    <h2 data-aos="fade-up">Work</h2>
+    <div
+      class="categories-container"
+      [ngClass]="{ 'categories-focus': categoryFiltered.length }"
+    >
+      <div class="select-category-clear">
+        <button
+          *ngIf="categoryFiltered.length"
+          class="btn clear-btn"
+          (click)="clearFilters()"
+        >
+          <img class="" src="./assets/icons/close-icon-purple.svg" />
+        </button>
+      </div>
+      <div class="categories-buttons-wrapper">
+        <button type="button" class="btn" (click)="filterProjects('UI Design')">
+          UI Design
+        </button>
+        <button
+          type="button"
+          class="btn"
+          (click)="filterProjects('Front-end development')"
+        >
+          Front-end development
+        </button>
+        <button
+          type="button"
+          class="btn"
+          (click)="filterProjects('UX Research')"
+        >
+          UX Research
+        </button>
+        <button type="button" class="btn" (click)="filterProjects('Branding')">
+          Branding
+        </button>
+      </div>
+    </div>
+    <div class="portfolio-item-outter">
+      <div class="portfolio-item-container g-0 row">
+        <ng-container *ngFor="let item of portfolioItems">
+          <portfolio-item
+            title="{{ item.title }}"
+            projectUrl="{{ item.projectUrl }}"
+            description="{{ item.description }}"
+            imgUrl="{{ item.imgUrl }}"
+            aosDelay="{{ item.aosDelay }}"
+            [isProtected]="item.isProtected"
+          ></portfolio-item>
+        </ng-container>
+      </div>
     </div>
   </div>
 </div>

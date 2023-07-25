@@ -1,8 +1,12 @@
 <div class="portfolio-item">
-  <a [href]="projectUrl" target="_blank" rel="noopener noreferrer">
+  <a
+    [href]="isProtected ? null : projectUrl"
+    (click)="isProtected ? openProtectedLink($event, projectUrl) : null"
+  >
     <div
       class="project-card"
       data-aos="fade-up"
+      data-aos-offset="0"
       [attr.data-aos-delay]="aosDelay"
     >
       <figure class="effect-milo">

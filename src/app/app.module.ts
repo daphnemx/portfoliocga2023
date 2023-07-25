@@ -9,6 +9,9 @@ import { HomeModule } from './components/home/home.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProjectsModule } from './components/projects/projects.module';
+
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, FooterComponent],
@@ -18,6 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserAnimationsModule,
     HomeModule,
     NgbModule,
+    NgbCollapseModule,
+    ProjectsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,6 +3,7 @@ a {
   margin: 0;
   padding: 0;
   color: currentColor;
+  cursor: pointer;
 }
 .portfolio-item {
   overflow: hidden;
@@ -30,14 +31,14 @@ a {
   justify-content: center;
   position: relative;
   margin: 0;
-  padding: 1rem;
+  //padding: 1rem;
   max-height: 450px;
 }
 
 .project-card figure {
   position: relative;
   overflow: hidden;
-  max-width: 480px;
+  //max-width: 460px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -66,18 +67,17 @@ a {
 }
 
 .project-card figure p {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   margin: 0 auto 0.65rem auto;
 }
 
 figure.effect-milo {
-  background-image: #ffff;
+  background-color: #ffff;
   display: flex;
 }
 figure.effect-milo:hover {
-  box-shadow: -2px 4px 10px -3px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: -2px 4px 10px -3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: -2px 4px 10px -3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
 }
 
 figure.effect-milo img {
@@ -90,7 +90,7 @@ figure.effect-milo img {
 }
 
 figure.effect-milo:hover img {
-  opacity: 0.01;
+  opacity: 0;
   -webkit-transform: translate3d(0, 0, 0) scale(1.12);
   transform: translate3d(0, 0, 0) scale(1.12);
 }
@@ -116,4 +116,16 @@ figure.effect-milo span {
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.25;
+}
+
+@media (max-width: 1200px) {
+  a {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+  }
+
+  .project-card {
+    max-height: 320px;
+  }
 }

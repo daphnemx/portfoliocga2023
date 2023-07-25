@@ -1,21 +1,20 @@
 .about-container {
   min-height: 100vh;
-  padding-top: 68.6px;
+  /*padding-top: 68.6px;*/
   /*background-image: url("../../../../assets/img/aboutme-img-bckg.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;*/
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   flex-wrap: wrap;
-  padding-inline: 12%;
+  padding: 8% 12%;
 }
 
 .text-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: space-between;
   align-content: center;
   justify-items: center;
 }
@@ -24,6 +23,10 @@ p {
 }
 
 h2 {
+  margin-bottom: 4rem;
+}
+
+.text-block-container {
   margin-bottom: 2rem;
 }
 
@@ -39,16 +42,33 @@ h2 {
   max-width: 50%;
 }
 
-.ilustracion-container {
+.right-container {
   display: flex;
-  align-content: center;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  height: 100%;
 }
 
+ul {
+  margin-bottom: 0;
+}
+
+.photo-container {
+  display: flex;
+  align-content: center;
+  margin-bottom: 2rem;
+}
 .cga-ilustracion {
   max-height: 360px;
-  border-radius: 3%;
+  border-radius: 1%;
+}
+
+.accordion-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 @media (max-width: 767.98px) {
@@ -57,5 +77,28 @@ h2 {
   }
   .buttons-container > * {
     max-width: 100%;
+  }
+  .text-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1200px) {
+  .right-container {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .photo-container {
+    margin: 4rem 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .accordion-container {
+    padding: 0 !important;
+    flex-wrap: wrap;
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd, Event } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -7,32 +8,47 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  isNavbarHidden = true;
+  isMenuCollapsed = true;
+  currentUrl: string = '';
 
   constructor(private router: Router, private renderer: Renderer2) {}
 
   ngOnInit() {
     this.renderer.listen('window', 'scroll', () => {
-      if (this.router.url === '/') {
-        this.handleScroll();
-        console.log('true');
-      }
+      this.handleScroll();
     });
-    console.log('URL:', this.router.url);
+
+    this.router.events
+      .pipe(
+        filter(
+          (event: Event): event is NavigationEnd =>
+            event instanceof NavigationEnd
+        )
+      )
+      .subscribe((event: Event) => {
+        this.currentUrl = (event as NavigationEnd).url;
+
+        const navElement = document.querySelector('nav');
+
+        if (navElement && this.currentUrl !== '/') {
+          navElement.classList.add('navbar-visible');
+        } else if (navElement) {
+          navElement.classList.remove('navbar-visible');
+        }
+      });
   }
 
   handleScroll() {
     const billboardSection = document.getElementById('billboard');
+    const navElement = document.querySelector('nav');
 
-    if (billboardSection) {
+    if (billboardSection && navElement) {
       const billboardRect = billboardSection.getBoundingClientRect();
 
-      if (this.router.url === '/') {
-        if (billboardRect.bottom <= 0) {
-          this.isNavbarHidden = false;
-        } else {
-          this.isNavbarHidden = true;
-        }
+      if (billboardRect.bottom <= 0) {
+        navElement.classList.add('navbar-visible');
+      } else {
+        navElement.classList.remove('navbar-visible');
       }
     }
   }
@@ -42,5 +58,10 @@ export class NavbarComponent implements OnInit {
     if (el !== null) {
       el.scrollIntoView();
     }
+  }
+
+  openLink(id: string | undefined) {
+    this.router.navigate([''], { fragment: id });
+    this.isMenuCollapsed = true;
   }
 }

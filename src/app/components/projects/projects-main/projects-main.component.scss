@@ -18,10 +18,12 @@ h2 {
 }
 
 h5,
-p {
+.parr-block {
   margin-bottom: 2rem;
 }
-
+p {
+  padding-bottom: 1rem;
+}
 li {
   margin-bottom: 0.5rem;
   font-size: initial;
@@ -40,7 +42,7 @@ img {
 
 .header-img-overlay {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .header-container {
@@ -51,8 +53,8 @@ img {
     rgba(243, 246, 249, 1) 50%,
     rgba(243, 246, 249, 1) 100%
   );
-  margin-inline: -4rem;
-  padding: 2rem 4rem;
+  margin-inline: -2rem;
+  padding: 2rem 2rem 4rem 2rem;
 }
 
 .img-block-container {
@@ -70,14 +72,47 @@ img {
 .img-text {
   width: 100%;
   margin-bottom: 1rem;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
   cursor: zoom-in;
   object-position: top;
 }
 
-.figcaption {
-  font-size: initial;
+figcaption,
+li {
+  font-size: 16px;
+}
+
+.img-standalone {
+  margin-bottom: 2rem;
+}
+
+button {
+  margin-top: 2rem;
+}
+
+.tags-container {
+  font-size: 14px;
+  line-height: 2.15rem;
+}
+
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  background-color: #f3e1fda1;
+  color: #9b1c98;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 2px 18px;
+  border-radius: 18px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 
 @media (max-width: 1199.98px) {
@@ -95,6 +130,13 @@ img {
     max-width: 100%;
     gap: 2rem;
     margin-block: 2rem;
+  }
+
+  .img-text {
+    height: auto;
+  }
+  .modal {
+    --modal-width: 300px !important;
   }
 }
 

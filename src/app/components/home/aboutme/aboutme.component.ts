@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './aboutme.component.html',
   styleUrls: ['./aboutme.component.scss', '../home/home.component.scss'],
 })
-export class AboutmeComponent {}
+export class AboutmeComponent {
+  scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el !== null) {
+      el.scrollIntoView();
+    }
+  }
+}

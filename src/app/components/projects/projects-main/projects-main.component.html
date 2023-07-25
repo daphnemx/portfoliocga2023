@@ -4,7 +4,11 @@
     <ng-container [ngSwitch]="project">
       <app-sales-statement
         *ngSwitchCase="'sales-statement'"
-      ></app-sales-statement
+      ></app-sales-statement>
+      <app-mental-b *ngSwitchCase="'mental-b'"></app-mental-b
+      ><app-dashboard *ngSwitchCase="'dashboard'"></app-dashboard>
+      <app-socialbook *ngSwitchCase="'socialbook'"></app-socialbook>
+      <app-aluminio *ngSwitchCase="'aluminio'"></app-aluminio
     ></ng-container>
   </div>
   <div class="col"></div>

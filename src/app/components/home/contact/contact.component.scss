@@ -1,19 +1,25 @@
 .contact-container {
   min-height: 100vh;
-  padding: 12%;
+  padding: 4% 12%;
   display: flex;
   align-items: flex-start;
 }
 
 .cards-container {
   display: flex;
-  margin-inline: -1rem;
-  gap: 4rem;
+  //margin-inline: -1rem;
+  //gap: 6rem;
   min-height: 300px;
+  margin-top: 4rem;
+  justify-content: space-between;
+}
+
+.cards-container > * {
+  flex-basis: 30%;
 }
 
 .contact-inner-container {
-  margin-top: 8rem;
+  margin-block: 8rem;
 }
 
 h2 {
@@ -25,9 +31,11 @@ h2 {
 }
 
 .contact-parr {
-  font-size: 0.95rem;
+  text-transform: none;
+  //font-size: 0.95rem;
   text-align: center;
-  margin-block: 2rem;
+  margin-block: 4rem;
+  font-weight: 200;
 }
 
 .contact-buttons-container {
@@ -39,14 +47,31 @@ a {
   text-decoration: none;
 }
 
+.contact-title {
+  color: #9b1c98;
+}
+
+@media (max-width: 1199.98px) {
+  .cards-container {
+    padding: 1rem;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-inline: -1rem;
+  }
+}
 @media (max-width: 767.98px) {
   .contact-container {
     padding: 2rem;
   }
-  .cards-container {
-    margin: -1rem;
-  }
-  .cards-container {
+
+  /*.cards-container {
+    flex-direction: column;
+  }*/
+  .contact-buttons-container {
     flex-direction: column;
   }
+}
+
+@media (max-width: 575.98px) {
 }

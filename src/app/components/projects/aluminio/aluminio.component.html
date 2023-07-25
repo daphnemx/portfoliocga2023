@@ -1,0 +1,220 @@
+<div class="project-inner-container">
+  <div class="header-container">
+    <div class="">
+      <h2 data-aos="fade-up">SocialBook: social network for readers</h2>
+      <div class="header-img-overlay">
+        <img
+          data-aos="fade-down"
+          class="header-img"
+          src="./assets/img/projects/socialbook/socialbook-head-img.webp"
+        />
+      </div>
+      <div class="tags-container">
+        Tools | Technologies | Methodologies:<br />
+        <div class="tags-wrapper">
+          <span class="project-tag">React</span
+          ><span class="project-tag">Firebase</span>
+          <span class="project-tag">sass</span>
+          <span class="project-tag">Google books api</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--TEXT BLOCK-->
+  <div class="text-block row">
+    <div class="col parr-block">
+      <h5>Overview</h5>
+      <p>
+        This case study showcases a project where I utilized React, Firebase,
+        and Sass to develop a social networking platform. The goal of the
+        project was to create a user-friendly and responsive platform that
+        allows users to connect, share content, and interact with each other.
+        Leveraging the capabilities of React for building reusable components,
+        Firebase for real-time data synchronization, and Sass for efficient
+        styling, I successfully delivered a functional and visually appealing
+        social network.
+      </p>
+      <h5>Features implemented</h5>
+      <ol>
+        <li>
+          Registration and Authentication:<br />
+          Users can register and create an account using their email address or
+          sign up with their Google account. The authentication system securely
+          handles user login and access to the application. Admin privileges are
+          available to specific users, enabling them to manage and moderate
+          content as needed.
+        </li>
+      </ol>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col parr-block">
+      <ol start="2">
+        <li>
+          Friends Management:<br />
+          Users can send friend requests to connect with other users on the
+          platform. The platform allows users to accept or decline friend
+          requests, giving them control over their social connections. A user's
+          friend list is accessible on their profile page, making it easy to
+          manage and interact with friends.
+        </li>
+        <li>
+          Posts and Interactions:<br />
+          Users can create and share posts, which may include text, images, and
+          videos, with their network. Posts are visible on the user's profile
+          and news feed, ensuring content dissemination among their friends.
+          Social interactions are encouraged through liking, commenting, and
+          sharing posts either publicly or within the user's friend circle.
+        </li>
+        <li>
+          Books Searcher:<br />
+          The application integrates with the Google Books API to offer users
+          book suggestions and recommendations based on their preferences. Users
+          can perform book searches, view book details, and access additional
+          information, such as book descriptions, authors, and reviews. Book
+          suggestions are tailored to the user's interests and reading history,
+          enhancing their overall experience.
+        </li>
+      </ol>
+    </div>
+  </div>
+  <!--IMG BLOCK-->
+  <div class="img-block-container">
+    <div class="img-container">
+      <div
+        (click)="imgZoom('./assets/img/projects/socialbook/signupscreen.png')"
+      >
+        <img
+          style="width: 100%; height: auto"
+          src="./assets/img/projects/socialbook/signupscreen.png"
+          class="img-text"
+        />
+      </div>
+      <figcaption>Sign-up screen.</figcaption>
+    </div>
+    <div class="img-container">
+      <div
+        (click)="imgZoom('./assets/img/projects/socialbook/signinsection.png')"
+      >
+        <img
+          style="width: 100%; height: auto"
+          src="./assets/img/projects/socialbook/signinsection.png"
+          class="img-text"
+        />
+      </div>
+      <figcaption>Quantitative analysis of feedback from users.</figcaption>
+    </div>
+  </div>
+  <!--TEXT BLOCK-->
+  <div class="text-block row">
+    <div class="col parr-block">
+      <h5>Technologies used</h5>
+      <ol>
+        <li>
+          React
+          <ul>
+            <li>
+              React was used as the frontend library for building the user
+              interface.
+            </li>
+            <li>
+              Components were created to encapsulate the UI elements and ensure
+              reusability.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Firebase
+          <ul>
+            <li>
+              Firebase was utilized for backend functionalities, including data
+              storage and real-time synchronization.
+            </li>
+            <li>
+              Firebase Authentication was used for user registration and login.
+            </li>
+            <li>
+              Firebase Firestore served as the database to store user profiles,
+              posts, and social connections.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Google Books API
+          <ul>
+            <li>
+              Integrated the Google Books API to provide users with personalized
+              book suggestions based on their preferences.
+            </li>
+            <li>
+              Utilized the Google Books API's search capabilities to enable
+              users to find specific books or topics of interest.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Sass
+          <ul>
+            <li>
+              Sass (Syntactically Awesome Style Sheets) was chosen as the CSS
+              preprocessor for efficient and maintainable styling.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col parr-block">
+      <h5>Challenges faced</h5>
+      <ol>
+        <li>
+          Real-time data synchronization: using Firebase ensured that posts,
+          interactions, and friend requests were updated instantly without
+          compromising data integrity. I planned and thorough tested to fiil up
+          the projects requierements.
+        </li>
+        <li>
+          Handling user authentication and security: Integrating Firebase
+          Authentication and managing user access privileges through the
+          project's backend required stringent security measures to safeguard
+          sensitive user data
+        </li>
+      </ol>
+      <h5>Conclusion</h5>
+      <p>
+        By employing React, Firebase, and Sass, I successfully developed a
+        social networking platform with essential features such as user
+        registration/authentication, profile customization, news feed, post
+        creation/interaction, and friend management. The project not only
+        improved my technical skills but also provided valuable experience in
+        planning, styling, and creating on a substantial web development
+        project.
+      </p>
+
+      <button
+        class="button-primary"
+        (click)="
+          openLink('https://cloudthedesigner.com/laboratoria/socialbook/#/')
+        "
+      >
+        Go to live site
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-box-arrow-up-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

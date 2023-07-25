@@ -1,13 +1,9 @@
-<nav
-  class="navbar navbar-expand-lg bg-body-tertiary fixed-top"
-  [class.navbar-hidden]="isNavbarHidden"
-  data-aos="fade-up"
->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-hidden">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"
       ><div>
         <div>Claudia Garfias</div>
-        <div class="jobtitle">PRODUCT DESIGNER</div>
+        <!--<div class="jobtitle">DESIGNER | DEVELOPER</div>-->
       </div></a
     >
     <button
@@ -18,31 +14,38 @@
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
+      (click)="isMenuCollapsed = !isMenuCollapsed"
     >
       <!--<span class="navbar-toggler-icon"></span>-->
       <div>
-        <img class="toggle-icon" src="./assets/icons/toggle-icon.svg" />
+        <img
+          *ngIf="isMenuCollapsed"
+          class="toggle-icon"
+          src="./assets/icons/toggle-icon.svg"
+        />
+        <img
+          *ngIf="!isMenuCollapsed"
+          class="toggle-icon"
+          src="./assets/icons/close-icon.svg"
+        />
       </div>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div
+      [ngbCollapse]="isMenuCollapsed"
+      class="collapse navbar-collapse"
+      id="navbarNav"
+    >
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection('portfolio')"
-            >know my work</a
+          <a class="nav-link" (click)="openLink('portfolio')">work</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="openLink('aboutme')" class="nav-link" aria-current="page"
+            >meet me</a
           >
         </li>
         <li class="nav-item">
-          <a
-            (click)="scrollToSection('aboutme')"
-            class="nav-link"
-            aria-current="page"
-            >know me</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="scrollToSection('contact')"
-            >get in touch</a
-          >
+          <a class="nav-link" (click)="openLink('contact')">contact</a>
         </li>
       </ul>
     </div>
