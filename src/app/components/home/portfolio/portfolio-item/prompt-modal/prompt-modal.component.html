@@ -18,6 +18,9 @@
       [(ngModel)]="password"
     />
   </div>
+  <div class="alert alert-warning" role="alert" *ngIf="showAlert">
+    Incorrect password, please try again.
+  </div>
 </div>
 <div class="modal-footer">
   <button type="button" class="button-primary" (click)="submit()">

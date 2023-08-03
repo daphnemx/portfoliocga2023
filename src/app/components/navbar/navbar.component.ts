@@ -32,6 +32,7 @@ export class NavbarComponent implements OnInit {
 
         if (navElement && this.currentUrl !== '/') {
           navElement.classList.add('navbar-visible');
+          this.isMenuCollapsed = true;
         } else if (navElement) {
           navElement.classList.remove('navbar-visible');
         }
@@ -49,16 +50,17 @@ export class NavbarComponent implements OnInit {
         navElement.classList.add('navbar-visible');
       } else {
         navElement.classList.remove('navbar-visible');
+        this.isMenuCollapsed = true;
       }
     }
   }
 
-  scrollToSection(id: string) {
+  /*scrollToSection(id: string) {
     const el = document.getElementById(id);
     if (el !== null) {
       el.scrollIntoView();
     }
-  }
+  }*/
 
   openLink(id: string | undefined) {
     this.router.navigate([''], { fragment: id });

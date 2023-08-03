@@ -22,14 +22,18 @@
 
 .navbar-brand {
   color: #9b1c98;
-  font-weight: 600;
+  background: #6b0b69;
+  background: linear-gradient(to top right, #6b0b69 0%, #ad17aa 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
   text-transform: lowercase;
   font-size: 1.75rem;
   font-family: Inter, sans-serif;
   //border-right: 1px solid #c5d7e4;
   padding: 0 2rem;
   text-align: justify;
-  letter-spacing: 0.3px;
+  letter-spacing: 1px;
   //width: 180px;
   display: flex;
   align-content: center;

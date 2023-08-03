@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
   categoryFiltered: string[] = [];
+
   originalItems: any[] = [
     {
       title: 'Sales Payment Statement',
@@ -22,7 +23,7 @@ export class PortfolioComponent implements OnInit {
       title: 'ADHD Website',
       projectUrl: 'projects/mental-b',
       description:
-        'Angular & Firebase web site: Informative site on ADHD disorder with an online test.',
+        'Angular & Firebase Website: Informative site on ADHD disorder with an online test.',
       imgUrl: './assets/img/projects/mental-b/mental-b-portfolio-img.png',
       isProtected: false,
       category: ['Front-end development'],
@@ -60,7 +61,7 @@ export class PortfolioComponent implements OnInit {
     {
       title: 'Industrial Aluminum Webpage',
       projectUrl: 'projects/aluminio',
-      description: 'Wordpress web site for an aluminum company.',
+      description: 'Wordpress Website for an aluminum company.',
       imgUrl: './assets/img/projects/aluminio/aluminio-portfolio-img.webp',
       isProtected: false,
       category: ['UI Design'],

@@ -3,6 +3,7 @@
 .bill-main-container {
   min-height: 100vh;
   background-color: $gray-accent;
+
   display: flex;
   flex-direction: column;
   padding-bottom: 5vh;
@@ -44,17 +45,28 @@
   font-weight: 300;
   color: $purple-primary;
   font-family: "Vidaloka", serif;
+  background: #940f91;
+  background: linear-gradient(to top right, #940f91 0%, #c21abe 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: none;
 }
 br {
   margin-block: 1rem;
 }
 h1 {
   color: $gray-secondary;
-  font-size: 2.55rem;
+  font-size: 2rem;
   margin: 0;
   font-weight: 100;
   animation: swing-in-top-bck 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  background: $gray-secondary;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes heartbeat {
@@ -114,7 +126,7 @@ h1 {
     font-size: 3.65rem;
   }
   h1 {
-    font-size: 2.25rem;
+    font-size: 1.85rem;
   }
   .bill-main-container {
     padding-bottom: 7vh;
@@ -127,10 +139,10 @@ h1 {
   }
 
   .bill-welcome {
-    font-size: 3.35rem;
+    font-size: 3.75rem;
   }
   h1 {
-    font-size: 2.15rem;
+    font-size: 1.75rem;
   }
   .bill-main-container {
     padding-bottom: 7vh;

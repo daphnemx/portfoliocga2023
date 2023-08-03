@@ -20,6 +20,10 @@ h2 {
   justify-content: space-between;
 }
 
+.portfolio-item-container-filtered {
+  justify-content: flex-start;
+}
+
 .portfolio-item-container > * {
   width: 32%;
   justify-self: flex-start;

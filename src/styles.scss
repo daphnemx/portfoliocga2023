@@ -23,6 +23,11 @@ h1 {
   font-family: "Vidaloka", serif;
   color: $purple-primary;
   font-size: 2.5rem;
+  background: #940f91;
+  background: linear-gradient(to top right, #940f91 0%, #c21abe 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -30,6 +35,11 @@ h2 {
   font-weight: 100;
   font-size: 2.9rem;
   line-height: 150%;
+  background: #940f91;
+  background: linear-gradient(to top right, #940f91 0%, #c21abe 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .button-primary {
@@ -59,7 +69,7 @@ p {
 }
 
 .footer {
-  background-color: $gray-primary;
+  background-color: $gray-dark;
   color: #ffff;
   display: flex;
   align-items: center;

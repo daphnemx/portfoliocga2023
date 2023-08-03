@@ -34,7 +34,7 @@ h2 {
   text-transform: none;
   //font-size: 0.95rem;
   text-align: center;
-  margin-block: 4rem;
+  margin-block: 1rem;
   font-weight: 200;
 }
 
@@ -58,6 +58,12 @@ a {
     margin-top: 2rem;
     gap: 2rem;
     margin-inline: -1rem;
+  }
+  .contact-inner-container {
+    margin: auto auto 4rem auto;
+  }
+  .contact-title {
+    margin-top: 6rem;
   }
 }
 @media (max-width: 767.98px) {

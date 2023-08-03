@@ -42,6 +42,8 @@ export class DashboardComponent {
       .then((password: string) => {
         if (password === 'uxclau') {
           window.open(url, '_blank', 'noopener noreferrer');
+        } else {
+          modalRef.componentInstance.showAlert = true; // Pass showAlert as true
         }
       })
       .catch(() => {
